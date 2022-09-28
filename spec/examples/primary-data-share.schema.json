@@ -1,0 +1,23 @@
+{
+    "$id": "https://pathfinder.dev/data-schemas/1.0.0/primary-data-share.json",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "PACT Primary Data Share Extension Schema",
+    "description": "A Pathfinder Data Model Extension to disclose Scope 2 and Scope 3 primary data shares.",
+    "required": [
+        "primaryDataShareScope2",
+        "primaryDataShareScope3"
+    ],
+    "type": "object",
+    "properties": {
+        "primaryDataShareScope2": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100
+        },
+        "primaryDataShareScope3": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 180
+        }
+    }
+}

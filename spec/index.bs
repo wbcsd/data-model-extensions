@@ -1,0 +1,235 @@
+<pre class='metadata'>
+Title: Technical Specification for Data Model Extensions
+Shortname: usecase-003-specs
+Level: 1
+Status: LD
+URL: https://wbcsd.github.io/data-model-extensions/spec/
+Editor:
+Mailing List: public-dev@pathfinder.sine.dev
+Repository: wbcsd/data-model-extensions
+Abstract: This draft document specifies data model extensions and their representation within a ProductFootprint document in accordance with the Guidance and Criteria for Pathfinder Data Model Extensions.
+Markup Shorthands: markdown yes
+Boilerplate: omit copyright, omit example
+</pre>
+
+<pre class=biblio>
+{
+  "semver": {
+    "href": "https://semver.org/spec/v2.0.0.html",
+    "title": "Semantic Versioning",
+    "authors": [
+        "Tom Preston-Werner"
+    ],
+    "status": "Informational",
+    "publisher": "",
+    "id": "semver",
+    "date": "1 January 2013"
+  }
+}
+</pre>
+
+
+# Introduction 
+
+<div class="note">
+**This is the first draft specification. It is pending feedback from the PACT Community.**
+</div>
+
+This document specifies data model extensions and their representation within a [=ProductFootprint=] document of the [=Pathfinder Data Model=].
+
+The foundation for extensibility is the Data Model Extension [=Criteria Catalog=].
+
+## Background
+
+Companies need to exchange emission data at product level in order to understand the carbon footprint of their products, to comply with regulations, or to improve the environmental and social footprint of their products.
+
+One realization of this is the Pathfinder Data Model which has its methodological roots in the Pathfinder Framework.
+
+By design, this methodology gives guidance for footprint information shared by a multitude of industries and sectors. 
+The Framework itself and the data attributes defined in it are industry-agnostic.
+
+Additional attributes of high specificity, for instance for certain sectors or activities related to a category of products or services, have a high utility value for the recipients of product footprint data. 
+Since they are specific, they are out of the scope of the Pathfinder Framework.
+
+In order to enable the exchange of such additional attributes, this document specifies data model extensions ([[#data-model-extension]]) and the resulting digital representation of data model extensions ([[#instantiation]]) within the Pathfinder Network data model ([[#encoding]]).
+
+
+# Definitions
+
+: <dfn>Pathfinder Data Model</dfn>
+:: The `ProductFootprint` definition from the Pathfinder [=Use Case 001 Specification=] Document.
+
+: <dfn>Use Case 001 Specification</dfn>
+:: See [Use Case 001 Specification document](https://www.carbon-transparency.com/media/1qcdbdyn/pathfinder-network_technical-specifications-for-use-case-001.pdf).
+
+: <dfn>Host System</dfn>
+:: A system running software that is conforming to the [=Use Case 001 Specification=]. See the same specification for further details.
+
+: <dfn>ProductFootprint</dfn>
+:: The footprint document related to a product, as defined in the [=Use Case 001 Specification=].
+
+: <dfn>Criteria Catalog</dfn>
+:: The catalog of criteria for Data Model Extensions. See https://wbcsd.github.io/data-model-extensions/guidance/
+
+# Example Business Case and Data Model Extension
+
+<div class="note">Non-normative.</div>
+
+A logistics-sector initiative decided to use the Pathfinder data model. 
+In order to enable GHG carbon emission accounting and reporting on this matter, 
+they define an extension. The extension defines attributes related to the 
+forthcoming ISO 14083, covering shipments and consignments.
+
+
+<div class="example">
+
+Example representation ([[#instantiation]]) of the exemplary logistics data model extension encoded in JSON:
+
+<pre class=include-code>
+path: examples/extension.json
+highlight: json
+</pre>
+
+</div>
+
+The property `dataSchema` references the [[#extension-definition]].
+
+The property `specVersion` is set to `1.0.0`, referencing the version of this specification.
+
+
+# Data Model Extension # {#data-model-extension}
+
+## Purpose and Audience of Data Model Extensions
+
+<div class="note">Non-normative.</div>
+
+The purpose of a data model extension is to increase the utility of the Pathfinder data model for users wanting to exchange product-level emissions data.
+
+The audience of data model extensions and their related documents are:
+
+- implementers of the data model extension
+- users of the data model extension such as life cycle analysts or carbon accounting experts
+- autonomous systems and agents in case of the Extension Schema file
+
+## Definition
+
+A data model extension consists of the following documents:
+
+1. The Extension Schema file that defines the data model extension ([[#extension-definition]])
+2. The Extension Documentation for users and implementers of the data model extension ([[#extension-documentation]])
+
+
+## Extension Schema File ## {#extension-definition}
+
+Every extension MUST define a [valid JSON Schema document according to the JSON Schema specification](https://datatracker.ietf.org/doc/html/draft-bhutton-json-schema-01).
+The extension schema file defines the data encoding and syntactical data validation details.
+
+Authors of extension schema definitions SHOULD attempt to add as many validation rules as possible such that data validation can be automated as much as possible.
+
+Extension schemas SHOULD be defined in a way to make illegal extension representations unrepresentable.
+
+Additional details which are not representable in JSON Schema such as data semantics or validation rules, MUST be defined in the extension documentation ([[#extension-documentation]]).
+
+## Extension Documentation ## {#extension-documentation}
+
+The extension documentation is a human-readable document that describes the extension in detail. Extension document MUST be written in English. The documentation CAN be offered as a translation in other languages as well.
+
+The documentation MUST include:
+
+1. Version of the extension and the document. The value MUST be a string in the format `major.minor.patch` as defined in [[!SEMVER|Semantic Versioning 2.0.0]].
+2. If the extension was updated, the document MUST include a changelog. The changelog MUST contain a summary of the changes between subsequent versions.
+2. A description of the extension, including the business case addressed by the extension and the business value gained by extending the Pathfinder Data Model.
+    2.1 This includes methodological alignment of the extension, especially covering the alignment with the Pathfinder Framework if applicable.
+4. A public [[!RFC3986|URL]] to the [[#extension-definition]].
+5. A license declaration covering the documentation, the extension schema file, and their use.
+6. Electronic contact information on how to get in touch with the authors and maintainers of the extension.
+
+
+# JSON Representation of a Data Model Extension # {#instantiation}
+
+## JSON representation properties
+
+The JSON representation of a data model extension is a JSON object.
+
+<div class="example">
+Example representation:
+
+```json
+{    
+    "specVersion": "1.0.0",
+    "dataSchema": "https://pathfinder.dev/data-schemas/1.0.0/shipment.json",
+    "documentation": "https://pathfinder.dev/data-schemas/1.0.0/shipment/documentation/",
+    "data": { ... }
+}
+```
+</div>
+
+The following properties are REQUIRED:
+
+: Property `specVersion`
+:: The version of the Data Model Extension specification.
+    The value MUST be a string in the format `major.minor.patch` as defined in [[!SEMVER|Semantic Versioning 2.0.0]].
+    This value MUST be `1.0.0` when referencing this specification.
+
+: Property `dataSchema`
+:: The value MUST be the URL to the publicly accessible [[#extension-definition]] encoded as a string
+
+: Property `data`
+:: The value MUST be a JSON Object that conforms to the extension schema file referenced by the `dataSchema` property.
+
+
+The following property is RECOMMENDED:
+
+: Property `documentation`
+:: The value MUST be the URL to the publicly accessible [[#extension-documentation]] encoded as a string
+
+The URLs for properties `dataSchema` and `documentation` MUST use the HTTPS schema. 
+
+# Encoding and Integration of Extensions into the Pathfinder Data Model # {#encoding}
+
+Note: this section is work in progress
+
+A [=ProductFootprint=] can be extended with 1 or more data model extensions. In this case, the `ProductFootprint` MUST include the property `extensions`. The value of property `extensions` is an array of data model extension representations ([[#instantiation]]).
+
+
+## Example
+
+<div class="example">
+
+A [=ProductFootprint=] example record with 2 imaginary extensions.
+
+<pre class=include-code>
+path: examples/productfootprint.json
+highlight: json
+line-numbers:
+line-highlight: 39-59
+</pre>
+
+The JSON schema file of the primary data share disclosure extension:
+
+<pre class=include-code>
+path: examples/primary-data-share.schema.json
+highlight: json
+</pre>
+
+
+</div>
+
+# Interoperability # {#interoperability}
+
+## Completeness ## {#interoperability-completeness}
+
+The representation of a data extension with respect to the `data` property MUST be complete. 
+
+See [Criterion 6 (Completeness) of the Guidance](https://sine-fdn.github.io/cti-usecase-003/guidance/#criterion-6) for details.
+
+
+## Extension Data Acceptance ## {#interoperability-acceptance}
+
+[=Host Systems=] MUST accept data model extensions that are conforming with this specification. 
+
+Host Systems MUST accept data model extensions that are conforming with this specification especially if they are not supported by the Host System.
+
+Note: Host Systems are assumed to follow the "[robustness principle](https://en.wikipedia.org/wiki/Robustness_principle)". 
+
+Note: The specification is lacking a definition for the case that a host system does not support a specific version of an extension.

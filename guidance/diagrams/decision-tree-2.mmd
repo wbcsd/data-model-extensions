@@ -1,0 +1,22 @@
+flowchart TB
+    Yes(Consider it)
+	No(Do <b>not</b> consider it)
+
+	S1(Is the attribute an <br><b>environmental attribute</b><br /> other than GHG emissions?<br/> <br/>)
+
+	S1 -- yes --> No
+	S1 -- no --> S2
+
+	S2(Does the attribute<br/>already exist within the<br/>Pathfinder Framework?<br/> <br/>)
+	S2 -- yes --> No
+	S2 -- no --> S3
+	
+	S3(Is the attribute already <br/>directly or indirectly<br/>involved in the calculation<br/>of a Pathfinder Framework-<br/>conforming PCF,<br/>e.g. because of a PCR<br/>referencing it?<br/> <br/>)
+
+	S3 -- yes --> Yes
+	S3 -- no --> S4
+
+	S4(Is the attribute related<br/> to a product, services<br/> or processes related<br/> to a product?<br/> <br/>)
+
+	S4 -- no --> No
+	S4 -- yes --> Yes

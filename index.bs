@@ -1,0 +1,34 @@
+<pre class='metadata'>
+Title: WBCSD Pact Network: Data Model Extensions
+Shortname: usecase-003
+Level: 1
+Status: LD
+URL: https://wbcsd.github.io/data-model-extensions/
+Editor:
+Repository: wbcsd/data-model-extensions
+Abstract: This document links to use case 003-related documents
+Markup Shorthands: markdown yes
+Boilerplate: omit copyright, omit example, omit conformance, omit abstract, omit toc
+</pre>
+
+# Introduction
+
+The following documents are related to the [Pathfinder Network](https://www.carbon-transparency.com/our-approach/pathfinder-framework) and its related data model, commonly called the Pathfinder Data Model.  
+
+The Pathfinder Data Model is a foundation for the Pathfinder Network. It defines what can be exchanged within the network (the data model), and what the exchanged data means (data semantics).
+
+Since the Pathfinder Network is designed to be industry-agnostic, so is its underlying data model. 
+
+In order to increase the utility of the Pathfinder Network and its data model, the community decided to define data model extensions, such that
+
+1. they align with the goals of the [vision of the Pathfinder Network](https://www.carbon-transparency.com/resources)
+2. there can be a common data model that can be used across industries without compromising on the utility of the data exchanged
+3. so that the PACT community can ultimately work towards a single "internet of emission data" that can be used by all industries and all stakeholders
+
+To make this happen, there are 2 documents
+
+: [Guidance](guidance/)
+:: This document provides guidance on how to extend the data model, and what to consider when doing so.
+
+: [Technical Specification](spec/)
+:: This document specifies at a technical what data model extensions are, and how they fit into the Pathfinder Data Model
