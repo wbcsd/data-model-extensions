@@ -63,8 +63,6 @@ forthcoming ISO 14083, covering shipments and consignments.
 
 <div class="note">Non-normative</div>
 
-Note: This section needs better wording and more approachable examples and arguments
-
 1. **Increasing the utility of the Pathfinder Network for its members**: by allowing them to enrich the data exchanged such that the data has an even higher value – for instance through better explainability of values
 2. **To increase the reach of the Pathfinder Network by pro-actively integrating other initiatives and networks with / into the Pathfinder Network**: and thereby improving the utility of the Pathfinder Network for its members
 3. **To increase the likelihood for the Pathfinder Framework to become a ubiquitous approach for PCFs and Scope 3 emission data exchange**: by opening up the data model, we hope to increase the likelihood for others to pick up the Pathfinder Framework. This would mean companies need to support fewer accounting frameworks and technical capabilities to exchange PCF data
