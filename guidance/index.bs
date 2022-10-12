@@ -10,7 +10,7 @@ Editor:
 	Cecilia Valeri, WBCSD, valeri@wbcsd.org
 Mailing List: public-dev@pathfinder.sine.dev
 Repository: wbcsd/data-model-extensions
-Abstract: This draft document defines data model extensions to the Pathfinder Framework data model and the criteria catalog for conforming data model extensions.
+Abstract: This document defines data model extensions to the Pathfinder Framework data model and the criteria catalog for conforming data model extensions.
 Markup Shorthands: markdown yes
 Boilerplate: omit copyright, omit conformance
 </pre>
@@ -27,16 +27,12 @@ The [=Pathfinder Network=] is the realization of the Pathfinder Framework with a
 accurate, primary and verified product emissions data – across all industries and value chains” 
 – quotation from [Pathfinder Vision Doc](https://www.carbon-transparency.com/media/luhii1or/pathfinder-network-vision-paper.pdf).
 
-The [PACT Initiative](https://www.carbon-transparency.com/) is the umbrella under which the 
-Pathfinder Framework and the Pathfinder Network is evolved. 
+The [=Pathfinder Framework=] and the [=Pathfinder Network=] evolved from the [PACT Initiative](https://www.carbon-transparency.com/).
 
-Different sector-specific initiatives and members of the PACT Initiative have raised interest 
-to extend the Pathfinder Data Model. Additional attributes of higher specificity enhance the utility 
-of the Pathfinder Data Model. 
+A variety of sector-specific initiatives indicate that it would be worthwhile extending the Pathfinder data model; PACT Initiative members have also expressed interest in an extension. Adding more highly specified attributes to the data model would enhance its utility.
 
-Data Extensions are an opportunity to open up the Pathfinder network for other business 
-cases around emission data. Future openness and adaptability of the Pathfinder Data Model 
-can be seen as a key enabler to converge onto a single shared emission data exchange format.
+The creation of data model extensions also provides an opportunity to open the Pathfinder Network up to other emissions-data-related business cases. The future openness and adaptability of the Pathfinder data model can be considered a key enabler to converging onto a single, shared emissions-data-exchange format.
+
 
 
 
@@ -46,17 +42,14 @@ The subject of this document (“the Criteria Catalog”) is the intersection be
 the Pathfinder Framework and its derived data model as specified in the 
 [=Use Case 001 Specification=].
 
-It defines Data Model Extensions to the Pathfinder Framework data model and their conformance. 
-The goal of this Criteria Catalog is to motivate and to enable the use of the Pathfinder Network 
-in as many domains as possible while adhering to the values of the PACT Initiative.
+The criteria catalog defines data model extensions to the Pathfinder Framework data model and their conformance. Its goal is to enable and motivate the use of the Pathfinder Network in as many domains as possible while adhering to the values of the PACT Initiative.
 
 ## Data Model Extension example
 
 <div class="example">
-A logistics-sector initiative decided to use the [=Pathfinder data model=]. 
+A team working on a logistics-sector initiative decide to use the  [=Pathfinder data model=]. 
 In order to enable GHG carbon emission accounting and reporting on this matter, 
-they define an extension. The extension defines attributes related to the 
-forthcoming ISO 14083, covering shipments and consignments.
+they define an extension. This extension defines attributes related to the forthcoming [ISO 14083](https://www.iso.org/standard/78864.html), which covers the quantification and reporting of greenhouse gases from transport chain operations.
 </div>
 
 ## Business value
@@ -138,11 +131,11 @@ inclusion with an extension.
 	Any entity, individual, sector-specific initiative, trade body, initiatives 
 	or other groups of entities can define an extension. 
 
-	The purpose of an extension is to increase the utility of the Pathfinder 
+	The purpose of an extension is to increase the utility of Pathfinder 
 	data model for users wanting to exchange product-level GHG emissions data.
 
-: Conformance
-:: An extension that conforms to each of the criterias defined in this document, is called a “conforming extension”.
+: <i>Conformance<i>
+:: An extension that conforms to each of the criteria defined in this document is called a “conforming extension.”
 
 
 ### Criterion 2: Possible scopes ### {#criterion-2}
