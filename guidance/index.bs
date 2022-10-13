@@ -47,7 +47,7 @@ The criteria catalog defines data model extensions to the Pathfinder Framework d
 ## Data Model Extension example
 
 <div class="example">
-A team working on a logistics-sector initiative decide to use the  [=Pathfinder data model=]. 
+An initiative from the logistics sector decides to use the  [=Pathfinder data model=]. 
 In order to enable GHG carbon emission accounting and reporting on this matter, 
 they define an extension. This extension defines attributes related to the forthcoming [ISO 14083](https://www.iso.org/standard/78864.html), which covers the quantification and reporting of greenhouse gases from transport chain operations.
 </div>
