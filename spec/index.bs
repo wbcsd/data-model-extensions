@@ -121,6 +121,8 @@ A data model extension consists of the following documents:
 
 ## Extension Schema File ## {#extension-definition}
 
+Issue: Decide on the schema definition language. I.e. is JSON Schema the right pick for us here?
+
 Every extension MUST define a [valid JSON Schema document according to the JSON Schema specification](https://datatracker.ietf.org/doc/html/draft-bhutton-json-schema-01).
 The extension schema file defines the data encoding and syntactical data validation details.
 
@@ -146,6 +148,15 @@ The documentation MUST include:
 
 
 # JSON Representation of a Data Model Extension # {#instantiation}
+
+Issue: Decide on support for recursive data model extensions.
+
+Issue: Decide if extensions are allowed to reference (sic!) other extensios (i.e. composition). If yes, how to best handle this in the JSON representation?
+
+Issue: related to the above: decide whether extensions can be combined into bigger "packs" / "bundles" / "profiles" of a set of extensions? Example: a steel manufacturing extension referencing recycling and transportation extensions.
+
+Issue: Decide if extensions are allowed to extend (sic!) other extensions (i.e. inheritance). If yes, how to best handle this in the JSON representation?
+
 
 ## JSON representation properties
 
