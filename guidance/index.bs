@@ -94,6 +94,15 @@ Note: Future revisions of the guidance are expected to relax the restriction on 
 : <dfn>ProductFootprint</dfn>
 :: The footprint document related to a product, as defined in the [=Use Case 001 Specification=].
 
+: <dfn>PCR</dfn>
+:: Product Category Rules
+
+: <dfn>PCF</dfn>
+:: Product Carbon Footprint
+
+: <dfn>GHG </dfn>
+:: Greenhouse Gas
+
 # Guidance # {#guidance}
 
 <div class="note">This section is non-normative</div>
@@ -116,7 +125,7 @@ inclusion with an extension.
 	<img src="diagrams/decision-tree-2.svg" />
 	<figcaption>Decision tree to be applied to each attribute of a Data Model Extension</figcaption>
 </figure>
-PCR = Product Category Rules
+
 
 # Criteria Catalog # {#criteria-catalog}
 
