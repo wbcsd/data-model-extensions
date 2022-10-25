@@ -116,7 +116,7 @@ inclusion with an extension.
 	<img src="diagrams/decision-tree-2.svg" />
 	<figcaption>Decision tree to be applied to each attribute of a Data Model Extension</figcaption>
 </figure>
-
+PCR = Product Category Rules
 
 # Criteria Catalog # {#criteria-catalog}
 
