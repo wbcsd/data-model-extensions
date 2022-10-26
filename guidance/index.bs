@@ -48,7 +48,7 @@ The criteria catalog defines data model extensions to the Pathfinder Framework d
 
 <div class="example">
 An initiative from the logistics sector decides to use the  [=Pathfinder data model=]. 
-In order to enable GHG carbon emission accounting and reporting on this matter, 
+In order to enable [=GHG=] carbon emission accounting and reporting on this matter, 
 they define an extension. This extension defines attributes related to the forthcoming [ISO 14083](https://www.iso.org/standard/78864.html), which covers the quantification and reporting of greenhouse gases from transport chain operations.
 </div>
 
@@ -58,7 +58,7 @@ they define an extension. This extension defines attributes related to the forth
 
 1. **Increasing the utility of the Pathfinder Network for its members**: by allowing them to enrich the data exchanged such that the data has an even higher value – for instance through better explainability of values
 2. **To increase the reach of the Pathfinder Network by pro-actively integrating other initiatives and networks with / into the Pathfinder Network**: and thereby improving the utility of the Pathfinder Network for its members
-3. **To increase the likelihood for the Pathfinder Framework to become a ubiquitous approach for PCFs and Scope 3 emission data exchange**: by opening up the data model, we hope to increase the likelihood for others to pick up the Pathfinder Framework. This would mean companies need to support fewer accounting frameworks and technical capabilities to exchange PCF data
+3. **To increase the likelihood for the Pathfinder Framework to become a ubiquitous approach for [=GHG=] emissions and Scope 3 emission data exchange**: by opening up the data model, we hope to increase the likelihood for others to pick up the Pathfinder Framework. This would mean companies need to support fewer accounting frameworks and technical capabilities to exchange [=GHG=] emission data
 
 ## Conformance
 
@@ -68,12 +68,12 @@ See [[#criterion-1]] for the definition.
 
 <div class="note">Non-normative</div>
 
-Emission data which is not GHG emission data is explicitly excluded from this document 
+Emission data which is not [=GHG=] emission data is explicitly excluded from this document 
 and its criteria catalog. The PACT community would like to apply the same requirements 
-and standards to third-party emissions data as for GHG-related data. The criterias required 
+and standards to third-party emissions data as for [=GHG=]-related data. The criterias required 
 for this are yet to be defined.
 
-Note: Future revisions of the guidance are expected to relax the restriction on GHG emission data.
+Note: Future revisions of the guidance are expected to relax the restriction on [=GHG=] emission data.
 
 
 
@@ -93,6 +93,12 @@ Note: Future revisions of the guidance are expected to relax the restriction on 
 
 : <dfn>ProductFootprint</dfn>
 :: The footprint document related to a product, as defined in the [=Use Case 001 Specification=].
+
+: <dfn>PCR</dfn>
+:: Product Category Rules
+
+: <dfn>GHG</dfn>
+:: Greenhouse Gas
 
 # Guidance # {#guidance}
 
@@ -116,7 +122,7 @@ inclusion with an extension.
 	<img src="diagrams/decision-tree-2.svg" />
 	<figcaption>Decision tree to be applied to each attribute of a Data Model Extension</figcaption>
 </figure>
-PCR = Product Category Rules
+
 
 # Criteria Catalog # {#criteria-catalog}
 
@@ -132,9 +138,9 @@ PCR = Product Category Rules
 	or other groups of entities can define an extension. 
 
 	The purpose of an extension is to increase the utility of Pathfinder 
-	data model for users wanting to exchange product-level GHG emissions data.
+	data model for users wanting to exchange product-level [=GHG=] emissions data.
 
-: <i>Conformance<i>
+: <i>Conformance</i>
 :: An extension that conforms to each of the criteria defined in this document is called a “conforming extension.”
 
 
@@ -158,7 +164,7 @@ Potential scopes
 
 An extension shall not contain additional environmental attributes beyond greenhouse gas emissions.
 
-Note: a future version of the Criteria Catalog will extend the scope to other, non-GHG emission data as well. 
+Note: a future version of the Criteria Catalog will extend the scope to other, non-[=GHG=] emission data as well. 
 
 ## Data attributes ## {#catalog-data-attributes}
 
@@ -180,13 +186,13 @@ partially override information that is already included or covered in
 the Pathfinder Framework in any form or sense.
 
 <div class="example">
-An extension has an attribute “GHG Emissions”. The definition of the attribute 
+An extension has an attribute “[=GHG=] Emissions”. The definition of the attribute 
 is an exact copy of the Pathfinder framework. Such an extension is then deemed 
 non-conforming as it (needlessly) duplicates an attribute from the Pathfinder Data Model.
 </div>
 
 <div class="example">
-An extension has an attribute “GHG Emissions”, but this time with a definition
+An extension has an attribute “[=GHG=] Emissions”, but this time with a definition
 that is non-conforming with the Pathfinder Framework. Such an extension is then 
 deemed non-conforming as it (needlessly) duplicates an attribute from the 
 Pathfinder Data Model and changes its semantics. This is further discouraged as it leads to ambiguity and 
@@ -257,5 +263,5 @@ The publication of the criteria catalog is the starting point for a more extensi
 We expect that there will be further publications in the following areas:
 
 1. **Definition of an online catalog of published extensions**: The PACT Community foresees the establishment of an online catalog of published extensions. The governance structure, guiding principles, and methodological requirements for extensions to be published there, will be scoped after the publication of this document.
-2. **Expansion of the criteria catalog's scope beyond GHG emission data**: There is already great interest in expanding the scope of this catalog beyond GHG emission data, such as data on air quality, water use, biodiversity among many others. Further specifications in this context can be seen as a possible future task resulting in an extension of the guideline. When doing so, we envision applying the same principles and methods that we use within the PACT community for the expansion into other impact factors as well.
+2. **Expansion of the criteria catalog's scope beyond [=GHG=] emission data**: There is already great interest in expanding the scope of this catalog beyond [=GHG=] emission data, such as data on air quality, water use, biodiversity among many others. Further specifications in this context can be seen as a possible future task resulting in an extension of the guideline. When doing so, we envision applying the same principles and methods that we use within the PACT community for the expansion into other impact factors as well.
 
