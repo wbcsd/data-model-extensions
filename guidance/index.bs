@@ -140,7 +140,7 @@ inclusion with an extension.
 	The purpose of an extension is to increase the utility of Pathfinder 
 	data model for users wanting to exchange product-level [=GHG=] emissions data.
 
-: <i>Conformance<i>
+: <i>Conformance</i>
 :: An extension that conforms to each of the criteria defined in this document is called a “conforming extension.”
 
 
