@@ -1,8 +1,9 @@
 <pre class='metadata'>
 Title: Guidance and Criteria Catalog for Pathfinder Data Model Extensions
-Shortname: usecase-003-guidance
+Shortname: data-model-extensions-guidance
 Level: 1
-Status: LD
+TR: https://wbcsd.github.io/tr/data-model-extensions-guidance/
+Status: LS
 Status Text: Pathfinder Draft
 URL: https://wbcsd.github.io/data-model-extensions/guidance/
 Editor: 
