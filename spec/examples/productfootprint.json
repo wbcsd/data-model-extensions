@@ -22,7 +22,7 @@
         "biogenicCarbonContent": "0.0",
         "reportingPeriodStart": "2021-01-01T00:00:00Z",
         "reportingPeriodEnd": "2022-01-01T00:00:00Z",
-        "geography_country": "FR",
+        "geographyCountry": "FR",
         "primaryDataShare": 47.0,
         "emissionFactorSources": [
             {
