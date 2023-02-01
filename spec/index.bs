@@ -18,12 +18,36 @@ Boilerplate: omit copyright, omit example
     "href": "https://semver.org/spec/v2.0.0.html",
     "title": "Semantic Versioning",
     "authors": [
-        "Tom Preston-Werner"
+      "Tom Preston-Werner"
     ],
     "status": "Informational",
     "publisher": "",
     "id": "semver",
     "date": "1 January 2013"
+  },
+  "DATA-EXCHANGE-PROTOCOL": {
+    "authors": [
+      "Pompéry, Martin",
+      "Valeri, Cecilia"
+    ],
+    "href": "https://wbcsd.github.io/data-exchange-protocol/v2/",
+    "title": "Technical Specifications for PCF Data Exchange (Version 2.0.0)",
+    "status": "LS",
+    "publisher": "WBCSD"
+  },
+  "EXTENSIONS-GUIDANCE": {
+    "authors": [],
+    "href": "https://wbcsd.github.io/data-exchange-protocol/v2/",
+    "title": "Guidance and Criteria Catalog for Pathfinder Data Model Extensions",
+    "status": "LS",
+    "publisher": "WBCSD"
+  },
+  "PATHFINDER-FRAMEWORK": {
+    "authors": [],
+    "href": "https://www.carbon-transparency.com/media/srhhloun/pathfinder-framework.pdf",
+    "title": "Pathfinder Framework: Guidance for the Accounting and Exchange of Product Life Cycle Emissions (Version 2.0)",
+    "status": "LS",
+    "publisher": "WBCSD"
   }
 }
 </pre>
@@ -31,19 +55,15 @@ Boilerplate: omit copyright, omit example
 
 # Introduction 
 
-<div class="note">
-**This is the first draft specification. It is pending feedback from the PACT Community.**
-</div>
-
 This document specifies data model extensions and their representation within a [=ProductFootprint=] document of the [=Pathfinder Data Model=].
 
-The foundation for extensibility is the Data Model Extension [=Criteria Catalog=].
+The foundation for extensibility is the Data Model Extension Guidance (see [[!EXTENSIONS-GUIDANCE]]).
 
 ## Background
 
 Companies need to exchange emission data at product level in order to understand the carbon footprint of their products, to comply with regulations, or to improve the environmental and social footprint of their products.
 
-One realization of this is the Pathfinder Data Model which has its methodological roots in the Pathfinder Framework.
+One realization of this is the Pathfinder Data Model which has its methodological roots in the Pathfinder Framework (see [[!PATHFINDER-FRAMEWORK]]).
 
 By design, this methodology gives guidance for footprint information shared by a multitude of industries and sectors. 
 The Framework itself and the data attributes defined in it are industry-agnostic.
@@ -54,22 +74,19 @@ Since they are specific, they are out of the scope of the Pathfinder Framework.
 In order to enable the exchange of such additional attributes, this document specifies data model extensions ([[#data-model-extension]]) and the resulting digital representation of data model extensions ([[#instantiation]]) within the Pathfinder Network data model ([[#encoding]]).
 
 
-# Definitions
+# Definitions # {#definitions}
 
 : <dfn>Pathfinder Data Model</dfn>
-:: The `ProductFootprint` definition from the Pathfinder [=Use Case 001 Specification=] Document.
+:: The `ProductFootprint` data model and definitions from [[!DATA-EXCHANGE-PROTOCOL]]
 
-: <dfn>Use Case 001 Specification</dfn>
-:: See [Use Case 001 Specification document](https://www.carbon-transparency.com/media/1qcdbdyn/pathfinder-network_technical-specifications-for-use-case-001.pdf).
+: <dfn>PACT Data Exchange Protocol</dfn>
+:: See technical specifications from [[!DATA-EXCHANGE-PROTOCOL]]
 
 : <dfn>Host System</dfn>
-:: A system running software that is conforming to the [=Use Case 001 Specification=]. See the same specification for further details.
+:: A system running software that is conforming to the [=PACT Data Exchange Protocol=]. See the same specification for further details.
 
 : <dfn>ProductFootprint</dfn>
-:: The footprint document related to a product, as defined in the [=Use Case 001 Specification=].
-
-: <dfn>Criteria Catalog</dfn>
-:: The catalog of criteria for Data Model Extensions. See https://wbcsd.github.io/data-model-extensions/guidance/
+:: The footprint document related to a product, as defined in [[!DATA-EXCHANGE-PROTOCOL]].
 
 # Example Business Case and Data Model Extension
 
@@ -94,7 +111,7 @@ highlight: json
 
 The property `dataSchema` references the [[#extension-definition]].
 
-The property `specVersion` is set to `1.0.0`, referencing the version of this specification.
+The property `specVersion` is set to `2.0.0`, referencing the version of this specification.
 
 
 # Data Model Extension # {#data-model-extension}
@@ -149,13 +166,6 @@ The documentation MUST include:
 
 # JSON Representation of a Data Model Extension # {#instantiation}
 
-Issue: Decide on support for recursive data model extensions.
-
-Issue: Decide if extensions are allowed to reference (sic!) other extensios (i.e. composition or inheritance in OO speak). If yes, how to best handle this in the JSON representation?
-
-Issue: related to the above: decide whether extensions can be combined into bigger "packs" / "bundles" / "profiles" of a set of extensions? Example: a steel manufacturing extension referencing recycling and transportation extensions.
-
-## JSON representation properties
 
 The JSON representation of a data model extension is a JSON object.
 
@@ -164,9 +174,9 @@ Example representation:
 
 ```json
 {    
-    "specVersion": "1.0.0",
-    "dataSchema": "https://pathfinder.dev/data-schemas/1.0.0/shipment.json",
-    "documentation": "https://pathfinder.dev/data-schemas/1.0.0/shipment/documentation/",
+    "specVersion": "2.0.0",
+    "dataSchema": "https://pathfinder.dev/shipment/1.0.0/data-schema.json",
+    "documentation": "https://pathfinder.dev/shipment/1.0.0/documentation/",
     "data": { ... }
 }
 ```
@@ -177,7 +187,7 @@ The following properties are REQUIRED:
 : Property `specVersion`
 :: The version of the Data Model Extension specification.
     The value MUST be a string in the format `major.minor.patch` as defined in [[!SEMVER|Semantic Versioning 2.0.0]].
-    This value MUST be `1.0.0` when referencing this specification.
+    This value MUST be `2.0.0` when referencing this specification.
 
 : Property `dataSchema`
 :: The value MUST be the URL to the publicly accessible [[#extension-definition]] encoded as a string
@@ -229,7 +239,7 @@ highlight: json
 
 The representation of a data extension with respect to the `data` property MUST be complete. 
 
-See [Criterion 6 (Completeness) of the Guidance](https://sine-fdn.github.io/cti-usecase-003/guidance/#criterion-6) for details.
+See Criterion 6 (Completeness) of the Guidance [[EXTENSIONS-GUIDANCE]] for details.
 
 
 ## Extension Data Acceptance ## {#interoperability-acceptance}
