@@ -173,8 +173,8 @@ Example representation:
 ```json
 {    
     "specVersion": "2.0.0",
-    "dataSchema": "https://pathfinder.dev/shipment/1.0.0/data-schema.json",
-    "documentation": "https://pathfinder.dev/shipment/1.0.0/documentation/",
+    "dataSchema": "https://catalog.carbon-transparency.com/shipment/1.0.0/schema.json",
+    "documentation": "https://catalog.carbon-transparency.com/shipment/1.0.0/documentation/",
     "data": { ... }
 }
 ```

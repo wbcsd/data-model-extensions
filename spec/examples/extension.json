@@ -1,6 +1,6 @@
 {
-  "specVersion": "1.0.0",
-  "dataSchema": "https://pathfinder.dev/data-schemas/1.0.0/shipment.json",
+  "specVersion": "2.0.0",
+  "dataSchema": "https://catalog.carbon-transparency.com/shipment/1.0.0/schema.json",
   "data": {
     "shipmentId": "1234567890",
     "consignmentId": "abcdefghi",

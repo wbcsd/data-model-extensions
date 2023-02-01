@@ -1,5 +1,5 @@
 {
-  "$id": "https://pathfinder.dev/data-schemas/1.0.0/primary-data-share.json",
+  "$id": "https://catalog.carbon-transparency.com/shipment/1.0.0/schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "PACT Primary Data Share Extension Schema",
   "description": "A Pathfinder Data Model Extension to disclose Scope 2 and Scope 3 primary data shares.",
