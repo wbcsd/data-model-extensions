@@ -1,11 +1,11 @@
 {
-    "specVersion": "1.0.0",
-    "dataSchema": "https://pathfinder.dev/data-schemas/1.0.0/shipment.json",
-    "data": {
-        "shipmentId": "1234567890",
-        "consignmentId": "abcdefghi",
-        "shipmentType": "PICKUP",
-        "weight": 10,
-        "transportChainElementId": "ABCDEFGHI"
-    }
+  "specVersion": "1.0.0",
+  "dataSchema": "https://pathfinder.dev/data-schemas/1.0.0/shipment.json",
+  "data": {
+    "shipmentId": "1234567890",
+    "consignmentId": "abcdefghi",
+    "shipmentType": "PICKUP",
+    "weight": 10,
+    "transportChainElementId": "ABCDEFGHI"
+  }
 }
