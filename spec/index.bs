@@ -4,8 +4,9 @@ Shortname: usecase-003-specs
 Level: 1
 Status: LD
 URL: https://wbcsd.github.io/data-model-extensions/spec/
-Editor:
-Mailing List: public-dev@pathfinder.sine.dev
+Editor: Beth Hadley (WBCSD), https://www.wbcsd.org, hadley@wbcsd.org
+Former Editor: Martin Pompéry (SINE Foundation), https://sine.foundation, martin@sine.foundation
+Mailing List: pact@wbcsd.org
 Repository: wbcsd/data-model-extensions
 Abstract: This draft document specifies data model extensions and their representation within a ProductFootprint document in accordance with the Guidance and Criteria for Pathfinder Data Model Extensions.
 Markup Shorthands: markdown yes
@@ -53,7 +54,7 @@ Boilerplate: omit copyright, omit example
 </pre>
 
 
-# Introduction 
+# Introduction
 
 This document specifies data model extensions and their representation within a [=ProductFootprint=] document of the [=Pathfinder Data Model=].
 
@@ -65,10 +66,10 @@ Companies need to exchange emission data at product level in order to understand
 
 One realization of this is the Pathfinder Data Model which has its methodological roots in the Pathfinder Framework (see [[!PATHFINDER-FRAMEWORK]]).
 
-By design, this methodology gives guidance for footprint information shared by a multitude of industries and sectors. 
+By design, this methodology gives guidance for footprint information shared by a multitude of industries and sectors.
 The Framework itself and the data attributes defined in it are industry-agnostic.
 
-Additional attributes of high specificity, for instance for certain sectors or activities related to a category of products or services, have a high utility value for the recipients of product footprint data. 
+Additional attributes of high specificity, for instance for certain sectors or activities related to a category of products or services, have a high utility value for the recipients of product footprint data.
 Since they are specific, they are out of the scope of the Pathfinder Framework.
 
 In order to enable the exchange of such additional attributes, this document specifies data model extensions ([[#data-model-extension]]) and the resulting digital representation of data model extensions ([[#instantiation]]) within the Pathfinder Network data model ([[#encoding]]).
@@ -92,9 +93,9 @@ In order to enable the exchange of such additional attributes, this document spe
 
 <div class="note">Non-normative.</div>
 
-A logistics-sector initiative decided to use the Pathfinder data model. 
-In order to enable GHG carbon emission accounting and reporting on this matter, 
-they define an extension. The extension defines attributes related to the 
+A logistics-sector initiative decided to use the Pathfinder data model.
+In order to enable GHG carbon emission accounting and reporting on this matter,
+they define an extension. The extension defines attributes related to the
 forthcoming ISO 14083, covering shipments and consignments.
 
 
@@ -171,7 +172,7 @@ The JSON representation of a data model extension is a JSON object.
 Example representation:
 
 ```json
-{    
+{
     "specVersion": "2.0.0",
     "dataSchema": "https://catalog.carbon-transparency.com/shipment/1.0.0/schema.json",
     "documentation": "https://catalog.carbon-transparency.com/shipment/1.0.0/documentation/",
@@ -199,7 +200,7 @@ The following property is RECOMMENDED:
 : Property `documentation`
 :: The value MUST be the URL to the publicly accessible [[#extension-documentation]] encoded as a string
 
-The URLs for properties `dataSchema` and `documentation` MUST use the HTTPS schema. 
+The URLs for properties `dataSchema` and `documentation` MUST use the HTTPS schema.
 
 # Encoding and Integration of Extensions into the Pathfinder Data Model # {#encoding}
 
@@ -235,17 +236,17 @@ highlight: json
 
 ## Completeness ## {#interoperability-completeness}
 
-The representation of a data extension with respect to the `data` property MUST be complete. 
+The representation of a data extension with respect to the `data` property MUST be complete.
 
 See Criterion 6 (Completeness) of the Guidance [[EXTENSIONS-GUIDANCE]] for details.
 
 
 ## Extension Data Acceptance ## {#interoperability-acceptance}
 
-[=Host Systems=] MUST accept data model extensions that are conforming with this specification. 
+[=Host Systems=] MUST accept data model extensions that are conforming with this specification.
 
 Host Systems MUST accept data model extensions that are conforming with this specification especially if they are not supported by the Host System.
 
-Note: Host Systems are assumed to follow the "[robustness principle](https://en.wikipedia.org/wiki/Robustness_principle)". 
+Note: Host Systems are assumed to follow the "[robustness principle](https://en.wikipedia.org/wiki/Robustness_principle)".
 
 Note: The specification is lacking a definition for the case that a host system does not support a specific version of an extension.
