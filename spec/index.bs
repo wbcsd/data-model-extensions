@@ -4,8 +4,9 @@ Shortname: usecase-003-specs
 Level: 1
 Status: LD
 URL: https://wbcsd.github.io/data-model-extensions/spec/
-Editor:
-Mailing List: public-dev@pathfinder.sine.dev
+Editor: Beth Hadley (WBCSD), https://www.wbcsd.org, hadley@wbcsd.org
+Former Editor: Martin Pompéry (SINE Foundation), https://sine.foundation, martin@sine.foundation
+Mailing List: pact@wbcsd.org
 Repository: wbcsd/data-model-extensions
 Abstract: This draft document specifies data model extensions and their representation within a ProductFootprint document in accordance with the Guidance and Criteria for Pathfinder Data Model Extensions.
 Markup Shorthands: markdown yes

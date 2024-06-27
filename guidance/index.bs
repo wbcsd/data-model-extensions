@@ -6,10 +6,9 @@ TR: https://wbcsd.github.io/tr/data-model-extensions-guidance/
 Status: LS
 Status Text: Pathfinder Draft
 URL: https://wbcsd.github.io/data-model-extensions/guidance/
-Editor:
-	Martin Pompéry, SINE Founation, martin@sine.foundation
-	Cecilia Valeri, WBCSD, valeri@wbcsd.org
-Mailing List: public-dev@pathfinder.sine.dev
+Editor: Beth Hadley (WBCSD), https://www.wbcsd.org, hadley@wbcsd.org
+Former Editor: Martin Pompéry (SINE Foundation), https://sine.foundation, martin@sine.foundation
+Mailing List: pact@wbcsd.org
 Repository: wbcsd/data-model-extensions
 Abstract: This document defines data model extensions to the Pathfinder Framework data model and the criteria catalog for conforming data model extensions.
 Markup Shorthands: markdown yes
@@ -110,7 +109,7 @@ Note: Future revisions of the guidance are expected to relax the restriction on 
 Decision Tree 1 is to decide whether a data model creation should be considered.
 
 <figure>
-	<img src="diagrams/decision-tree-1.svg" />
+	<img src="diagrams/decision-tree-1.svg">
 	<figcaption>Decision tree to decide on the creation of an extension.</figcaption>
 </figure>
 
@@ -120,7 +119,7 @@ The following decision tree explains whether a specific attribute is deemed conf
 inclusion with an extension.
 
 <figure>
-	<img src="diagrams/decision-tree-2.svg" />
+	<img src="diagrams/decision-tree-2.svg">
 	<figcaption>Decision tree to be applied to each attribute of a Data Model Extension</figcaption>
 </figure>
 
