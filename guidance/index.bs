@@ -6,7 +6,7 @@ TR: https://wbcsd.github.io/tr/data-model-extensions-guidance/
 Status: LS
 Status Text: Pathfinder Draft
 URL: https://wbcsd.github.io/data-model-extensions/guidance/
-Editor: 
+Editor:
 	Martin Pompéry, SINE Founation, martin@sine.foundation
 	Cecilia Valeri, WBCSD, valeri@wbcsd.org
 Mailing List: public-dev@pathfinder.sine.dev
@@ -17,15 +17,15 @@ Boilerplate: omit copyright, omit conformance
 </pre>
 
 
-# Introduction 
+# Introduction
 
-The [=Pathfinder Framework=] gives guidance for footprint information calculation 
-shared by a multitude of industries and sectors. The Framework itself and the 
+The [=Pathfinder Framework=] gives guidance for footprint information calculation
+shared by a multitude of industries and sectors. The Framework itself and the
 data attributes defined in it (the [=Pathfinder Data Model=]) are – by design – industry-agnostic.
 
 The [=Pathfinder Network=] is the realization of the Pathfinder Framework with aspiration to become
-"an open and global network of interoperable solutions for the secure peer-to-peer exchange of 
-accurate, primary and verified product emissions data – across all industries and value chains” 
+"an open and global network of interoperable solutions for the secure peer-to-peer exchange of
+accurate, primary and verified product emissions data – across all industries and value chains”
 – quotation from [Pathfinder Vision Doc](https://www.carbon-transparency.com/media/luhii1or/pathfinder-network-vision-paper.pdf).
 
 The [=Pathfinder Framework=] and the [=Pathfinder Network=] evolved from the [PACT Initiative](https://www.carbon-transparency.com/).
@@ -37,10 +37,10 @@ The creation of data model extensions also provides an opportunity to open the P
 
 
 
-# Subject 
+# Subject
 
-The subject of this document (“the Criteria Catalog”) is the intersection between 
-the Pathfinder Framework and its derived data model as specified in the 
+The subject of this document (“the Criteria Catalog”) is the intersection between
+the Pathfinder Framework and its derived data model as specified in the
 [=Use Case 001 Specification=].
 
 The criteria catalog defines data model extensions to the Pathfinder Framework data model and their conformance. Its goal is to enable and motivate the use of the Pathfinder Network in as many domains as possible while adhering to the values of the PACT Initiative.
@@ -48,8 +48,8 @@ The criteria catalog defines data model extensions to the Pathfinder Framework d
 ## Data Model Extension example
 
 <div class="example">
-An initiative from the logistics sector decides to use the  [=Pathfinder data model=]. 
-In order to enable [=GHG=] carbon emission accounting and reporting on this matter, 
+An initiative from the logistics sector decides to use the  [=Pathfinder data model=].
+In order to enable [=GHG=] carbon emission accounting and reporting on this matter,
 they define an extension. This extension defines attributes related to the forthcoming [ISO 14083](https://www.iso.org/standard/78864.html), which covers the quantification and reporting of greenhouse gases from transport chain operations.
 </div>
 
@@ -69,9 +69,9 @@ See [[#criterion-1]] for the definition.
 
 <div class="note">Non-normative</div>
 
-Emission data which is not [=GHG=] emission data is explicitly excluded from this document 
-and its criteria catalog. The PACT community would like to apply the same requirements 
-and standards to third-party emissions data as for [=GHG=]-related data. The criterias required 
+Emission data which is not [=GHG=] emission data is explicitly excluded from this document
+and its criteria catalog. The PACT community would like to apply the same requirements
+and standards to third-party emissions data as for [=GHG=]-related data. The criterias required
 for this are yet to be defined.
 
 Note: Future revisions of the guidance are expected to relax the restriction on [=GHG=] emission data.
@@ -84,7 +84,7 @@ Note: Future revisions of the guidance are expected to relax the restriction on 
 :: The set of data attributes stemming from [=Pathfinder Framework=] plus its concrete realization as specified in [=Use Case 001 Specification=].
 
 : <dfn>Pathfinder Framework</dfn>
-:: See the Pathfinder [Framework Version 1 Document](https://www.carbon-transparency.com/media/uhtlh3tt/pact-setting-foundations-for-standardized-emissions-data-exchange.pdf).
+:: See the Pathfinder [Framework Version 1 Document](https://wbcsd.github.io/tr/2023/framework-20232601/framework.pdf).
 
 : <dfn>Pathfinder Network</dfn>
 :: The logical realization of the [=Pathfinder Framework=] as a network of interoperable solutions for the secure peer-to-peer exchange of accurate, primary and verified product emissions data – across all industries and value chains.
@@ -116,7 +116,7 @@ Decision Tree 1 is to decide whether a data model creation should be considered.
 
 ## Decision Tree 2: Should I consider the addition of a certain attribute to an extension? ## {#decision-tree-2}
 
-The following decision tree explains whether a specific attribute is deemed conforming for 
+The following decision tree explains whether a specific attribute is deemed conforming for
 inclusion with an extension.
 
 <figure>
@@ -132,13 +132,13 @@ inclusion with an extension.
 ### Criterion 1: Definitions ### {#criterion-1}
 
 : <dfn>Extension</dfn>
-:: An extension is a set of well-defined additional data attributes that 
+:: An extension is a set of well-defined additional data attributes that
 	extend the Pathfinder Framework data model.
 
-	Any entity, individual, sector-specific initiative, trade body, initiatives 
-	or other groups of entities can define an extension. 
+	Any entity, individual, sector-specific initiative, trade body, initiatives
+	or other groups of entities can define an extension.
 
-	The purpose of an extension is to increase the utility of Pathfinder 
+	The purpose of an extension is to increase the utility of Pathfinder
 	data model for users wanting to exchange product-level [=GHG=] emissions data.
 
 : <i>Conformance</i>
@@ -147,8 +147,8 @@ inclusion with an extension.
 
 ### Criterion 2: Possible scopes ### {#criterion-2}
 
-The general subject matter of extensions must be in the context of product data. 
-The data of an extension can therefore be related to product-specific data, 
+The general subject matter of extensions must be in the context of product data.
+The data of an extension can therefore be related to product-specific data,
 product-specific emissions data, manufacturing processes or services.
 
 <div class="example">
@@ -165,7 +165,7 @@ Potential scopes
 
 An extension shall not contain additional environmental attributes beyond greenhouse gas emissions.
 
-Note: a future version of the Criteria Catalog will extend the scope to other, non-[=GHG=] emission data as well. 
+Note: a future version of the Criteria Catalog will extend the scope to other, non-[=GHG=] emission data as well.
 
 ## Data attributes ## {#catalog-data-attributes}
 
@@ -176,27 +176,27 @@ Data attributes must be uniquely attributable to and distinguishable between
 - Attributes defined by the PACT Initiative, and
 - Attributes defined by extensions.
 
-In the future, it must be possible to extend a Pathfinder Data Model with 
-additional attributes that are currently not yet known. Such evolution must not 
+In the future, it must be possible to extend a Pathfinder Data Model with
+additional attributes that are currently not yet known. Such evolution must not
 lead to possible ambiguities between Pathfinder-specified data and that of extensions.
 
 ### Criterion 4: No overriding ### {#criterion-4}
 
-The attribute or attributes of an extension may not override or even 
-partially override information that is already included or covered in 
+The attribute or attributes of an extension may not override or even
+partially override information that is already included or covered in
 the Pathfinder Framework in any form or sense.
 
 <div class="example">
-An extension has an attribute “[=GHG=] Emissions”. The definition of the attribute 
-is an exact copy of the Pathfinder framework. Such an extension is then deemed 
+An extension has an attribute “[=GHG=] Emissions”. The definition of the attribute
+is an exact copy of the Pathfinder framework. Such an extension is then deemed
 non-conforming as it (needlessly) duplicates an attribute from the Pathfinder Data Model.
 </div>
 
 <div class="example">
 An extension has an attribute “[=GHG=] Emissions”, but this time with a definition
-that is non-conforming with the Pathfinder Framework. Such an extension is then 
-deemed non-conforming as it (needlessly) duplicates an attribute from the 
-Pathfinder Data Model and changes its semantics. This is further discouraged as it leads to ambiguity and 
+that is non-conforming with the Pathfinder Framework. Such an extension is then
+deemed non-conforming as it (needlessly) duplicates an attribute from the
+Pathfinder Data Model and changes its semantics. This is further discouraged as it leads to ambiguity and
 misalignment at a methodological-level.
 </div>
 
@@ -205,14 +205,14 @@ misalignment at a methodological-level.
 
 ### Criterion 5: Publishing of an Extension ### {#criterion-5}
 
-The authors can publish an extension by making it available to the public for 
-free over the Internet. The authors of an extension are responsible for performing 
-necessary compliance checks (competition law, confidentiality, intellectual property, 
+The authors can publish an extension by making it available to the public for
+free over the Internet. The authors of an extension are responsible for performing
+necessary compliance checks (competition law, confidentiality, intellectual property,
 etc.) before publication.
- 
-The license of a published extension must grant users, commercial entities, 
-software vendors, researchers the right to use the extension in a commercial 
-and non-commercial manner for free. 
+
+The license of a published extension must grant users, commercial entities,
+software vendors, researchers the right to use the extension in a commercial
+and non-commercial manner for free.
 
 The license should allow for modifications or creation of derived works.
 
@@ -221,32 +221,32 @@ The license should allow for modifications or creation of derived works.
 
 ### Criterion 6: Referencing, Completeness, and Self-Description ### {#criterion-6}
 
-Once an extension is used to exchange product-level emission data, the data related 
-to the extension 
+Once an extension is used to exchange product-level emission data, the data related
+to the extension
 
 1. must reference the underlying data schema in a machine-readable format.
 2. should contain a reference to the documentation of the extension data
 
 : Completeness
-:: The data of an extension must be complete in the following sense: 
-	it must be possible to make full use of it without extra or additional effort. 
-	Such extra effort includes e.g. the need to access another system, database, 
+:: The data of an extension must be complete in the following sense:
+	it must be possible to make full use of it without extra or additional effort.
+	Such extra effort includes e.g. the need to access another system, database,
 	website, etc.
 
 <div class="example">
-Non-conforming extension: An extension has an attribute `ReferenceId` which links to 
-an external system and special purpose data access mechanism  (and the information 
+Non-conforming extension: An extension has an attribute `ReferenceId` which links to
+an external system and special purpose data access mechanism  (and the information
 referenced is not otherwise available within the Product Footprint statement shared).
-Such linking between systems and data access regimes is discouraged. 
-It limits interoperability, and it is unclear, whether, how, and if the 
+Such linking between systems and data access regimes is discouraged.
+It limits interoperability, and it is unclear, whether, how, and if the
 receiving entity is even able to access the data referenced there.
 </div>
 
 ### Criterion 7: Digital Representation of an Extension ### {#criterion-7}
 
 A published extension must include relevant information for experts such that
-they can make meaningful use of the extension (“semantic interoperability”). 
-Additionally, a published publication must include technical information to 
+they can make meaningful use of the extension (“semantic interoperability”).
+Additionally, a published publication must include technical information to
 reach interoperability at the technical level (“data interoperability” especially).
 
 ### Criterion 8: Extensions per Product Footprint ### {#criterion-8}
@@ -265,4 +265,3 @@ We expect that there will be further publications in the following areas:
 
 1. **Definition of an online catalog of published extensions**: The PACT Community foresees the establishment of an online catalog of published extensions. The governance structure, guiding principles, and methodological requirements for extensions to be published there, will be scoped after the publication of this document.
 2. **Expansion of the criteria catalog's scope beyond [=GHG=] emission data**: There is already great interest in expanding the scope of this catalog beyond [=GHG=] emission data, such as data on air quality, water use, biodiversity among many others. Further specifications in this context can be seen as a possible future task resulting in an extension of the guideline. When doing so, we envision applying the same principles and methods that we use within the PACT community for the expansion into other impact factors as well.
-
