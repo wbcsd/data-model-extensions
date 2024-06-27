@@ -109,7 +109,7 @@ Note: Future revisions of the guidance are expected to relax the restriction on 
 Decision Tree 1 is to decide whether a data model creation should be considered.
 
 <figure>
-	<img src="diagrams/decision-tree-1.svg" />
+	<img src="diagrams/decision-tree-1.svg">
 	<figcaption>Decision tree to decide on the creation of an extension.</figcaption>
 </figure>
 
@@ -119,7 +119,7 @@ The following decision tree explains whether a specific attribute is deemed conf
 inclusion with an extension.
 
 <figure>
-	<img src="diagrams/decision-tree-2.svg" />
+	<img src="diagrams/decision-tree-2.svg">
 	<figcaption>Decision tree to be applied to each attribute of a Data Model Extension</figcaption>
 </figure>
 
