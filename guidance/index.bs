@@ -83,7 +83,7 @@ Note: Future revisions of the guidance are expected to relax the restriction on 
 :: The set of data attributes stemming from [=Pathfinder Framework=] plus its concrete realization as specified in [=Use Case 001 Specification=].
 
 : <dfn>Pathfinder Framework</dfn>
-:: See the Pathfinder [Framework Version 1 Document](https://www.carbon-transparency.com/media/uhtlh3tt/pact-setting-foundations-for-standardized-emissions-data-exchange.pdf).
+:: See the Pathfinder [Framework Version 1 Document](https://wbcsd.github.io/tr/2023/framework-20232601/framework.pdf).
 
 : <dfn>Pathfinder Network</dfn>
 :: The logical realization of the [=Pathfinder Framework=] as a network of interoperable solutions for the secure peer-to-peer exchange of accurate, primary and verified product emissions data – across all industries and value chains.
